@@ -269,7 +269,7 @@ function addcmd(name, desc, func)
 	namee.Parent = frr
 	namee.BackgroundTransparency = 1
 	namee.Text = " " .. tostring(name)
-	namee.TextSize = 16
+	namee.TextSize = 12
 	namee.Font = Enum.Font.GothamBold
 	namee.TextColor3 = Color3.fromRGB(255, 255, 255)
 	namee.TextXAlignment = Enum.TextXAlignment.Left
