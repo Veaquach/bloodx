@@ -1,3 +1,4 @@
+-- yes, if youre reading this this is the main theme of BloodX :)
 local cmds = getgenv().bloodxtbl
 	or {
 		{ "error", "This only shows up if it couldn't find commands, please make sure you launched this through BloodXs's cmds command.", function() end },
