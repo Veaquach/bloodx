@@ -287,8 +287,12 @@ function addcmd(name, desc, func)
 	descc.TextWrapped = true
 	descc.TextYAlignment = Enum.TextYAlignment.Top
 end
-for i, v in pairs(cmds) do
-	addcmd(v[1], v[2], v[3])
+for name, data in pairs(cmds) do
+    if type(data) == "table" and data.desc then
+        addcmd(data.displaynms or name, data.desc, data.func)
+    elseif type(data) == "table" then
+        addcmd(data[1], data[2], data[3])
+    end
 end
 local spinconn
 task.spawn(function()
